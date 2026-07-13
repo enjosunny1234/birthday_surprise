@@ -34,6 +34,10 @@ const hero = document.querySelector(".hero");
 
 hero.style.display = "none";
 
+if (giftScreen) {
+    giftScreen.style.display = "flex";
+}
+
 let giftOpened = false;
 
 
@@ -70,54 +74,22 @@ function openGift() {
 
     setTimeout(() => {
 
+        giftScreen.classList.add("hide");
+
+    }, 1800);
+
+
+    setTimeout(() => {
+
         giftScreen.style.display = "none";
 
         hero.style.display = "flex";
 
-        // scroll wapas on
         document.body.style.overflowY = "auto";
 
-    }, 2600);
+    }, 3200);
 
 }
-
-
-if (openGiftBtn) {
-
-    openGiftBtn.innerHTML = "Opening... ❤️";
-    openGiftBtn.disabled = true;
-
-}
-
-
-setTimeout(() => {
-
-    // gift hide nahi hoga abhi
-
-}, 1800);
-
-
-setTimeout(() => {
-
-    if (giftScreen) {
-
-        giftScreen.style.display = "none";
-
-    }
-
-
-    if (hero) {
-
-        hero.style.display = "flex";
-
-    }
-
-    document.body.style.overflowY = "auto";
-
-
-}, 2600);
-
-
 
 
 
