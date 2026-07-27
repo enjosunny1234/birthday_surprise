@@ -594,7 +594,7 @@ document.querySelectorAll(".section")
 
 
 
-console.log("❤️ Happy Birthday Palak ❤️");
+console.log("❤️ Happy Birthday ❤️");
 
 if (openGiftBtn) {
     openGiftBtn.addEventListener("click", openGift);
